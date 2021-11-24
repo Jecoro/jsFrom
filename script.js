@@ -1,3 +1,4 @@
+//Jesus Cortazar Romera
 document.addEventListener('DOMContentLoaded', function () {
     const nombre=document.getElementById("nombre");
     const apellidos=document.getElementById("apellidos");
@@ -59,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function validarEdad(){
         const edad=document.getElementById("edad").value;
-        var regex = /^[0-9]$|^[1-9][0-9]$|^(105)$/;
+        var regex = /^[0-9]$|^[1-9][0-9]$|^(105)$/;//tres numero del 0 al 9 y que como maximo sea 105
         if(edad!=""){
             
             if (!regex.test(edad)){
@@ -77,6 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function validarNif(){
         const nif=document.getElementById("nif").value;
         var regex = /^[0-9XYZ][0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKE]$/i;//Esta regex valida tanto pasaporte como dni(junté las regex de cada uno basicamente) 
+        //NIF (Numero de Identificación Fiscal) - 8 numeros y una letra
+        //NIE (Numero de Identificación de Extranjeros) - 1 letra(XYZ), 7 numeros y 1 letra(TRWAGMYFPDXBNJZSQVHLCKE)
         if(nif!=""){
             if (!regex.test(nif)){
                 document.getElementById("errores").innerHTML="<p>El formato del NIF no  es correcto</p>";
